@@ -7,7 +7,7 @@
  * Run with: npx tsx examples/with-oauth.ts
  */
 
-import { createMcpServer, isOk, isErr, formatError } from '../src/index.js';
+import { createMcpServer, isOk, isErr, formatError } from 'contex';
 
 async function main() {
   console.log('Creating MCP server with OAuth authentication...\n');

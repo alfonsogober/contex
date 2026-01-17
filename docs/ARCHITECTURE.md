@@ -1,4 +1,4 @@
-# MCP Library Architecture
+# Contex Library Architecture
 
 ## Overview
 
@@ -196,7 +196,7 @@ MCP Client Response
 ### Adding Custom Tools
 
 ```typescript
-import { createCustomMcpServer, type McpTool } from 'mcp';
+import { createCustomMcpServer, type McpTool } from 'contex';
 import { z } from 'zod';
 
 const customTool: McpTool = {
@@ -225,7 +225,7 @@ const server = await createCustomMcpServer(
 ### Custom Schema Conversion
 
 ```typescript
-import { jsonSchemaToZod, applyDescription } from 'mcp';
+import { jsonSchemaToZod, applyDescription } from 'contex';
 
 const customConverter = (schema: JsonSchema): ZodTypeAny => {
   const base = jsonSchemaToZod(schema);
@@ -242,7 +242,7 @@ const customConverter = (schema: JsonSchema): ZodTypeAny => {
 ### Custom Token Storage
 
 ```typescript
-import { type TokenStorage, createTokenManagerState } from 'mcp';
+import { type TokenStorage, createTokenManagerState } from 'contex';
 
 const redisStorage: TokenStorage = {
   get: async (key) => {

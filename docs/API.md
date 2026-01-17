@@ -1,4 +1,4 @@
-# MCP Library API Reference
+# Contex Library API Reference
 
 ## Table of Contents
 
@@ -22,7 +22,7 @@
 Creates an MCP server from an OpenAPI specification.
 
 ```typescript
-import { createMcpServer, isOk } from 'mcp';
+import { createMcpServer, isOk } from 'contex';
 
 const result = await createMcpServer({
   name: 'My API Server',

@@ -9,7 +9,6 @@
 
 import { z } from 'zod';
 import {
-  createMcpServer,
   createCustomMcpServer,
   isOk,
   isErr,
@@ -17,7 +16,7 @@ import {
   type McpTool,
   type McpResource,
   type Operation,
-} from '../src/index.js';
+} from 'contex';
 
 const customTools: McpTool[] = [
   {

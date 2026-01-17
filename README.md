@@ -1,4 +1,4 @@
-# MCP - OpenAPI to Model Context Protocol Server
+# Contex - OpenAPI to Model Context Protocol Server
 
 A generic TypeScript library for converting OpenAPI specifications into MCP (Model Context Protocol) servers. Built with a purely functional architecture using Ramda.
 
@@ -14,13 +14,13 @@ A generic TypeScript library for converting OpenAPI specifications into MCP (Mod
 ## Installation
 
 ```bash
-npm install mcp zod
+npm install contex zod
 ```
 
 ## Quick Start
 
 ```typescript
-import { createMcpServer, isOk } from 'mcp';
+import { createMcpServer, isOk } from 'contex';
 
 const result = await createMcpServer({
   name: 'My API Server',
@@ -38,7 +38,7 @@ if (isOk(result)) {
 ## With OAuth Authentication
 
 ```typescript
-import { createMcpServer, isOk } from 'mcp';
+import { createMcpServer, isOk } from 'contex';
 
 const result = await createMcpServer({
   name: 'Secure API Server',
@@ -77,7 +77,7 @@ if (isOk(result)) {
 The library uses a `Result<T, E>` monad for error handling:
 
 ```typescript
-import { isOk, isErr, fold, formatError } from 'mcp';
+import { isOk, isErr, fold, formatError } from 'contex';
 
 const result = await createMcpServer(config);
 
@@ -103,7 +103,7 @@ import {
   extractOperations,
   buildToolsPipeline,
   buildResourcesPipeline,
-} from 'mcp';
+} from 'contex';
 
 // Parse OpenAPI spec
 const specResult = await parseOpenApiSpec('./openapi.yaml');

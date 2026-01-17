@@ -1,17 +1,17 @@
 {
-  "name": "mcp",
+  "name": "contex",
   "version": "1.0.0",
   "description": "Generic library for converting OpenAPI specifications into MCP (Model Context Protocol) servers",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "./node_modules/.bin/tsc",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint src --ext .ts",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "./node_modules/.bin/tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
   "keywords": [
@@ -23,11 +23,11 @@
     "tools",
     "agents"
   ],
-  "author": "",
+  "author": "Alfonso Gober <alfonso@gober.consulting>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/mcp"
+    "url": "git+https://github.com/alfonsogober/contex.git"
   },
   "engines": {
     "node": ">=18.0.0"
@@ -56,10 +56,19 @@
     "@types/node": "^22.0.0",
     "@types/ramda": "^0.30.0",
     "@vitest/coverage-v8": "^2.0.0",
-    "typescript": "^5.7.0",
+    "typescript": "^5.9.3",
     "vitest": "^2.0.0"
   },
   "peerDependencies": {
     "zod": "^3.25.0"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "example": "examples",
+    "test": "tests"
+  },
+  "bugs": {
+    "url": "https://github.com/alfonsogober/contex/issues"
+  },
+  "homepage": "https://github.com/alfonsogober/contex#readme"
 }

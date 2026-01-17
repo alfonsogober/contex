@@ -3,7 +3,7 @@
  * 
  * @example
  * ```typescript
- * import { createMcpServer } from 'mcp';
+ * import { createMcpServer } from 'contex';
  * 
  * const result = await createMcpServer({
  *   name: 'My API Server',
