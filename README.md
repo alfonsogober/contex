@@ -148,6 +148,37 @@ See the `examples/` directory for complete examples:
 - `with-oauth.ts` - Server with OAuth authentication
 - `custom-tools.ts` - Server with custom tool definitions
 
+## Existing Alternatives
+
+Several similar libraries exist in the ecosystem:
+
+| Library | Description |
+|---------|-------------|
+| [openapi-mcpserver-generator](https://www.npmjs.com/package/openapi-mcpserver-generator) | Generates MCP server code from OpenAPI specs |
+| [openapi-mcp-generator](https://github.com/harsha-iiiv/openapi-mcp-generator) | TypeScript tool for OpenAPI → MCP conversion |
+| [openapi-to-mcp-converter](https://github.com/zxypro1/openapi-to-mcp-converter) | Automatic OpenAPI to MCP Server conversion |
+| [openapi-mcp-server](https://github.com/sotayamashita/openapi-mcp-server) | Bridge between OpenAPI and MCP for Claude Desktop |
+| [api-to-mcp](https://github.com/TykTechnologies/api-to-mcp) | Turn any API into MCP tools |
+| [Stainless](https://www.stainless.com/blog/generate-mcp-servers-from-openapi-specs) | Commercial platform for MCP server generation |
+| [Speakeasy](https://www.speakeasy.com/docs/standalone-mcp/build-server) | Commercial tool for generating MCP servers |
+
+### How This Library Differs
+
+| Feature | Existing Tools | This Library |
+|---------|---------------|--------------|
+| Architecture | Mostly imperative/OOP | Purely functional (Ramda) |
+| Error Handling | Exceptions | Result monad |
+| OAuth Support | Limited/varies | Full OAuth 2.1 + PKCE |
+| Runtime | Code generation | Runtime conversion |
+| Composability | Low | High (`R.pipe`) |
+
+**Unique aspects of this library:**
+- Purely functional architecture using Ramda
+- Result monad for type-safe error handling (no exceptions)
+- Runtime library (not code generation)
+- Built-in OAuth 2.1 with PKCE support
+- Highly composable pure functions
+
 ## Development
 
 ```bash
